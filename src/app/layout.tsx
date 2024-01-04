@@ -1,8 +1,14 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Marck_Script } from 'next/font/google'
 import './globals.css'
+import { AntdRegistry } from '@ant-design/nextjs-registry'
 
-const inter = Inter({ subsets: ['latin'] })
+const main_font = Marck_Script({
+    weight: ['400'],
+    subsets: ['latin', 'cyrillic'],
+    preload: true,
+    variable: '--var-main-font',
+})
 
 export const metadata: Metadata = {
     title: 'LKP new',
@@ -16,7 +22,9 @@ export default function RootLayout({
 }) {
     return (
         <html lang="ru">
-            <body className={inter.className}>{children}</body>
+            <body className={main_font.variable}>
+                <AntdRegistry>{children}</AntdRegistry>
+            </body>
         </html>
     )
 }
