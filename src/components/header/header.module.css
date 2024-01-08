@@ -1,0 +1,47 @@
+@import '/src/const/styles.css';
+
+.logo img {
+    width: 151px;
+}
+
+.header .ant-layout-header {
+    .ant-layout-header {
+        padding: 0 70px 0 0;
+        background: var(--SERVICE_LAYOUT_COLOR);
+        height: var(--HEAD_HEIGHT);
+    }
+}
+
+.title .ant-layout-header.header {
+    font-size: 12px;
+    font-weight: bold;
+    position: relative;
+    margin-left: -0px;
+    bottom: 8px;
+}
+
+.subtitle .ant-layout-header.header {
+    margin-top: 2px;
+    font-size: 12px;
+    color: gray;
+}
+
+.title .ant-layout-header.header {
+    width: 200px;
+    font-family: var(--BASE_FONT);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: right;
+}
+
+.phone .ant-layout-header.header {
+    width: 200px;
+    font-family: var(--BASE_FONT);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: right;
+}

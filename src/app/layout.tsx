@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Marck_Script } from 'next/font/google'
 import './globals.css'
 import { AntdRegistry } from '@ant-design/nextjs-registry'
+import HeaderMain from '../components/header/header'
 
 const main_font = Marck_Script({
     weight: ['400'],
@@ -21,9 +22,12 @@ export default function RootLayout({
     children: React.ReactNode
 }) {
     return (
-        <html lang="ru">
-            <body className={main_font.variable}>
-                <AntdRegistry>{children}</AntdRegistry>
+        <html className={main_font.variable} lang="ru">
+            <body>
+                <HeaderMain />
+                <main>
+                    <AntdRegistry>{children}</AntdRegistry>
+                </main>
             </body>
         </html>
     )
